@@ -8,6 +8,10 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.bixbytowing.com/">
 
+  <!-- Load the matching hero image before styles and scripts. -->
+  <link rel="preload" as="image" href="images/hero-mobile-v1.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
+  <link rel="preload" as="image" href="images/hero-v1.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high">
+
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.bixbytowing.com/">
@@ -712,7 +716,7 @@
        ========================================================================== */
     .hero-section {
       position: relative;
-      background: #171516 url("images/image-2.png") center center / cover no-repeat;
+      background: #171516 url("images/hero-v1.webp") center center / cover no-repeat;
       color: #FFFFFF;
       min-height: 100vh;
       min-height: 100svh;
@@ -723,6 +727,10 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       box-sizing: border-box;
     }
+    @media (max-width: 768px) {
+      .hero-section { background-image: url("images/hero-mobile-v1.webp"); }
+    }
+
     .hero-overlay {
       position: absolute !important;
       inset: 0 !important;
@@ -2468,7 +2476,7 @@
   <header class="site-header" id="siteHeader">
     <div class="header-container">
       <a href="#hero" class="brand" aria-label="Bixby Towing Home">
-        <img src="images/Bixby_Towing.png" alt="Bixby Towing Service Logo" class="brand-logo" width="46" height="46">
+        <img src="images/logo-v1.webp" fetchpriority="high" loading="eager" decoding="async" alt="Bixby Towing Service Logo" class="brand-logo" width="46" height="46">
         <span class="brand-text">
           <b>BIXBY TOWING</b>
           <small>BY NEPTUNE TOWING</small>
@@ -3128,7 +3136,7 @@
         <!-- Col 1: Brand & Logo -->
         <div class="footer-col footer-brand-col">
           <a href="#hero" class="footer-logo-link">
-            <img src="images/Bixby_Towing.png" alt="Bixby Towing" class="footer-logo-img">
+            <img src="images/logo-v1.webp" alt="Bixby Towing" class="footer-logo-img" width="173" height="192" loading="lazy" decoding="async">
             <div class="footer-logo-text">
               <b>BIXBY TOWING</b>
               <small>BY NEPTUNE TOWING</small>
